@@ -1,0 +1,21 @@
+<h3>Warframe list</h3>
+
+<div *ngIf="deletedWarframe; else nothingWasDeleted">
+  <h3>
+    Warframe deleted <small class="text-danger">{{ deletedWarframe }}</small>
+  </h3>
+</div>
+<ng-template #nothingWasDeleted>
+  <h3>Any warframe deleted</h3>
+</ng-template>
+
+<button
+  *ngIf="warframeNames.length > 0"
+  (click)="removeLastWarframe()"
+  class="btn btn-outline-danger"
+>
+  Delete last warframe
+</button>
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of warframeNames" class="list-group-item">{{ name }}</li>
+</ul>
