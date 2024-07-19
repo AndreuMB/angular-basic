@@ -5,10 +5,17 @@ import { CounterModule } from './counter/components/counter.module';
 
 import { AppComponent } from './app.component';
 import { WarframesModule } from './warframes/warframes.module';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CounterModule, WarframesModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CounterModule,
+    WarframesModule,
+    DbzModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
